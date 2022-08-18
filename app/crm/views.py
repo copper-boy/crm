@@ -1,14 +1,16 @@
 from typing import Optional
-from uuid import uuid4, UUID
+from uuid import UUID, uuid4
 
 from aiohttp.web_exceptions import HTTPBadRequest
 from aiohttp.web_response import Response
-from aiohttp_apispec import docs, request_schema, response_schema, querystring_schema
+from aiohttp_apispec import (docs, querystring_schema, request_schema,
+                             response_schema)
 
 from app.crm.mixins import AuthMixin
 from app.crm.models import User
-from app.crm.schemas import UserAddSchema, ListUsersResponseSchema, UserGetRequestSchema, UserGetResponseSchema, \
-    UserSchema
+from app.crm.schemas import (ListUsersResponseSchema, UserAddSchema,
+                             UserGetRequestSchema, UserGetResponseSchema,
+                             UserSchema)
 from app.web.app import View
 from app.web.schemas import OkResponseSchema
 from app.web.utils import json_response

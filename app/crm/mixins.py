@@ -1,6 +1,6 @@
 from typing import TYPE_CHECKING
 
-from aiohttp.web_exceptions import HTTPUnauthorized, HTTPForbidden
+from aiohttp.web_exceptions import HTTPForbidden, HTTPUnauthorized
 
 from app.web.utils import check_basic_auth
 

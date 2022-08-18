@@ -1,5 +1,5 @@
+from typing import TYPE_CHECKING, Optional
 from uuid import UUID
-from typing import Optional, TYPE_CHECKING
 
 from app.crm.models import User
 

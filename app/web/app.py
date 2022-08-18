@@ -1,7 +1,9 @@
 from typing import Optional
 
-from aiohttp.web import Application as AiohttpApplication, run_app as aiohttp_run_app, View as AiohttpView, \
-    Request as AiohttpRequest
+from aiohttp.web import Application as AiohttpApplication
+from aiohttp.web import Request as AiohttpRequest
+from aiohttp.web import View as AiohttpView
+from aiohttp.web import run_app as aiohttp_run_app
 from aiohttp_apispec import setup_aiohttp_apispec
 
 from app.store.crm.accessor import CrmAccessor
