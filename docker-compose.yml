@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  api_service:
+    image: web-app:latest
+    build: ./
+    command: python main.py
+    volumes:
+      - ./:/app/
+    env_file:
+      - .env
+    ports:
+      - '12342:80'
+  nginx:
+    image: nginx:latest
+    ports:
+      - '80:80'
+    volumes:
+      - ./nginx_config.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - api_service
+
